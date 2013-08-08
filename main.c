@@ -8,16 +8,13 @@ void render_day(int week, int day);
 int main() {
   int year, month;
 
-  // do {
-  //   printf("input year:");
-  //   scanf("%d", &year);
+  do {
+    printf("input year:");
+    scanf("%d", &year);
 
-  //   printf("input month:");
-  //   scanf("%d", &month);
-  // } while (year < 1900 || (month < 1 || month > 12));
-
-  year = 2013;
-  month = 8;
+    printf("input month:");
+    scanf("%d", &month);
+  } while (year < 1900 || (month < 1 || month > 12));
 
   render_header(year, month);
   render_body(year, month);
