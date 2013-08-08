@@ -1,7 +1,7 @@
 #ifndef CALENDAR_H_
 #define CALENDAR_H_
 
-typedef enum _DayOfWeek {
+typedef enum {
   Sunday,
   Monday,
   Tuesday,

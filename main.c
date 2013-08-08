@@ -54,13 +54,11 @@ void render_body(int year, int month) {
 }
 
 void render_day(int week, int day) {
-  if (week == 0) {
-    // Sunday
+  if (week == Sunday) {
     printf("\x1b[35m"); // color magenta
     printf(" %2d ", day);
     printf("\x1b[39m"); // default
-  } else if (week == 6) {
-    // Saturday
+  } else if (week == Saturday) {
     printf("\x1b[34m"); // color blue
     printf(" %2d ", day);
     printf("\x1b[39m"); // default
