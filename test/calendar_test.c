@@ -42,5 +42,5 @@ int main() {
   test_day_of_week();
 
   TEST_SUMMARY();
-	return 0;
+  return 0;
 }
