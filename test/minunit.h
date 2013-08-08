@@ -7,18 +7,18 @@
 
 #include <stdio.h>
 
-#define ASSERT_TRUE(test, message) do {\
+#define ASSERT_TRUE(expression, message) do {\
   mu_tests_run++;\
-  if (!test) {\
+  if (!expression) {\
     printf("%s:%d: %s\n", __FUNCTION__, __LINE__, message);\
   } else {\
     mu_tests_success++;\
   }\
 } while (0)
 
-#define ASSERT_FALSE(test, message) do {\
+#define ASSERT_FALSE(expression, message) do {\
   mu_tests_run++;\
-  if (test) {\
+  if (expression) {\
     printf("%s:%d: %s\n", __FUNCTION__, __LINE__, message);\
   } else {\
     mu_tests_success++;\
