@@ -2,13 +2,13 @@
 #define CALENDAR_H_
 
 typedef enum _DayOfWeek {
-	Sunday,
-	Monday,
-	Tuesday,
-	Wednesday,
-	Thursday,
-	Friday,
-	Saturday
+  Sunday,
+  Monday,
+  Tuesday,
+  Wednesday,
+  Thursday,
+  Friday,
+  Saturday
 } DayOfWeek;
 
 int is_leap_year(int year);

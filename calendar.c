@@ -2,20 +2,20 @@
 #include "calendar.h"
 
 int is_leap_year(int year) {
-	if (year % 400 == 0 || (year % 100 != 0 && year % 4 == 0)) {
-		return 1;
-	}
-	return 0;
+  if (year % 400 == 0 || (year % 100 != 0 && year % 4 == 0)) {
+    return 1;
+  }
+  return 0;
 }
 
 int last_day_of_month(int year, int month) {
-	static int days[] = {
-		31, 28, 31, 30, 31, 30, 
+  static int days[] = {
+    31, 28, 31, 30, 31, 30, 
     31, 31, 30, 31, 30, 31
-	};
-	int day = days[month - 1];
+  };
+  int day = days[month - 1];
 
-	return month != 2 ? day: day + is_leap_year(year);
+  return month != 2 ? day: day + is_leap_year(year);
 }
 
 /* 
