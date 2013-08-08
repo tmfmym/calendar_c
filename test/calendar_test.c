@@ -35,16 +35,12 @@ static void test_day_of_week() {
   ASSERT_INT_EQ(Saturday, day_of_week(2013, 8, 10));
   ASSERT_INT_EQ(Thursday, day_of_week(2020, 12, 31));
 }
- 
-void all_tests() {
+
+int main() {
   test_is_leap_year();
   test_days_in_month();
   test_day_of_week();
 
   TEST_SUMMARY();
-}
-
-int main() {
-	all_tests();
 	return 0;
 }
