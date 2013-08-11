@@ -1,12 +1,22 @@
 #include <stdio.h>
+#include <time.h>
 #include "calendar.h"
 
+void render_calendar(int year, int month);
 void render_header(int year, int month);
 void render_body(int year, int month);
 void render_day(int week, int day);
 
 int main() {
   int year, month;
+  time_t current_time_t;
+  struct tm *current_tm;
+
+  time(&current_time_t);
+  current_tm = localtime(&current_time_t);
+  current_tm->tm_year;
+  current_tm->tm_mon+1;
+  current_tm->tm_mday;
 
   do {
     printf("input year:");
@@ -16,10 +26,14 @@ int main() {
     scanf("%d", &month);
   } while (year < 1900 || (month < 1 || month > 12));
 
-  render_header(year, month);
-  render_body(year, month);
+  render_calendar(year, month);
 
   return 0;
+}
+
+void render_calendar(int year, int month) {
+  render_header(year, month);
+  render_body(year, month);
 }
 
 void render_header(int year, int month) {
